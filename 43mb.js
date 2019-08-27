@@ -2,7 +2,7 @@
   Para poder poner este script en tu server tienes que poner tambien un archivo en tu server y saber de que tamaño es para poner la informacion en imageAddr y downloadSize.
 */
 
-var imageAddr = "https://dl.dropboxusercontent.com/s/zkzm8mowg6mu6uh/43MB.jpg" + "?n=" + Math.random();
+var imageAddr = "/43MB.jpg" + "?n=" + Math.random();
 var startTime, endTime;
 var downloadSize = 45554906; //43.4Mb
 var download = new Image();
