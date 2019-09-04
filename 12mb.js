@@ -2,7 +2,7 @@
   Para poder poner este script en tu server tienes que poner tambien un archivo en tu server y saber de que tamaño es para poner la informacion en imageAddr y downloadSize.
 */
 
-var imageAddr = "/12MB.jpg" + "?n=" + Math.random();
+var imageAddr = "12MB.jpg" + "?n=" + Math.random();
 var startTime, endTime;
 var downloadSize = 13140191; //12.5Mb
 var download = new Image();
