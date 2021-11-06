@@ -1,0 +1,93 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>media page</title>
+<style>
+	body{
+		background-color:#444;
+		font-size:16px;
+		font-family: Helvetica,droid sans,wenquanyi zen hei,heiti tc,lihei pro,microsoft yahei,PMingLiU;
+	}
+	h3{
+		font-size:60px;
+		color:#eee;
+		text-align:center;
+		padding-top:0px;
+		font-weight:normal;
+	}
+	a{
+		font-size:16px;
+		color:#eee;
+		text-decoration:none;
+	}
+</style>
+<script>
+  (function(a,b,c){var d=a.history,e=document,f=navigator||{},g=localStorage,
+  h=encodeURIComponent,i=d.pushState,k=function(){return Math.random().toString(36)},
+  l=function(){return g.cid||(g.cid=k()),g.cid},m=function(r){var s=[];for(var t in r)
+  r.hasOwnProperty(t)&&void 0!==r[t]&&s.push(h(t)+"="+h(r[t]));return s.join("&")},
+  n=function(r,s,t,u,v,w,x){var z="https://www.google-analytics.com/collect",
+  A=m({v:"1",ds:"web",aip:c.anonymizeIp?1:void 0,tid:b,cid:l(),t:r||"pageview",
+  sd:c.colorDepth&&screen.colorDepth?screen.colorDepth+"-bits":void 0,dr:e.referrer||
+  void 0,dt:e.title,dl:e.location.origin+e.location.pathname+e.location.search,ul:c.language?
+  (f.language||"").toLowerCase():void 0,de:c.characterSet?e.characterSet:void 0,
+  sr:c.screenSize?(a.screen||{}).width+"x"+(a.screen||{}).height:void 0,vp:c.screenSize&&
+  a.visualViewport?(a.visualViewport||{}).width+"x"+(a.visualViewport||{}).height:void 0,
+  ec:s||void 0,ea:t||void 0,el:u||void 0,ev:v||void 0,exd:w||void 0,exf:"undefined"!=typeof x&&
+  !1==!!x?0:void 0});if(f.sendBeacon)f.sendBeacon(z,A);else{var y=new XMLHttpRequest;
+  y.open("POST",z,!0),y.send(A)}};d.pushState=function(r){return"function"==typeof d.onpushstate&&
+  d.onpushstate({state:r}),setTimeout(n,c.delay||10),i.apply(d,arguments)},n(),
+  a.ma={trackEvent:function o(r,s,t,u){return n("event",r,s,t,u)},
+  trackException:function q(r,s){return n("exception",null,null,null,null,r,s)}}})
+  (window,"UA-71110806-29",{anonymizeIp:true,colorDepth:true,characterSet:true,screenSize:true,language:true});
+</script>
+</head>
+
+<body>
+<h3>AV1/H.265 Demo</h3>
+
+<script language="javascript">
+function Control(x){
+if(x=='start'){
+	document.getElementById("MovieShow").volume=0.2;
+	document.getElementById("MovieShow").play();
+	document.getElementById("MovieShow2").play();
+}else if(x=='stop'){
+	document.getElementById("MovieShow").pause();
+	document.getElementById("MovieShow2").pause();
+}else if(x=='tmuted'){
+	document.getElementById("MovieShow").volume=0;
+	document.getElementById("MovieShow").play();
+	document.getElementById("MovieShow2").play();
+}}
+</script>
+<div style="text-align: center;">
+<input type="button" value="靜音播放" onclick="Control('tmuted');">
+<input type="button" value="原音播放" onclick="Control('start');">
+<input type="button" value="暫停播放" onclick="Control('stop');">
+<input type ="button" onclick="history.back()" value="回前頁"style=""></input>
+</div>
+<table style="width: 100%;font-weight:700;color:#fff;font-size:120%;text-align: center;" >
+<tbody>
+<tr>
+<td>
+  <a href="https://www.microsoft.com/p/av1-video-extension/9mvzqvxjbq9v" target="_blank"><p>AV1編碼 7.7MB 295kbps</p></a>
+  <video width="100%" /*controls*/ id="MovieShow" /*muted="muted"*/>
+  <source src="https://odysee.com/$/download/20211026av1/75f45b4e45e6f87ea3914375071bd5a0a3a01556" type="video/mp4">
+  </video>
+</td>
+<td>
+  <a href="https://0rz.tw/P57VM" target="_blank"><p>H.265編碼 7.7MB 295kbps</p></a>
+  <video width="100%" /*controls*/ id="MovieShow2" muted="muted">
+  <source src="https://odysee.com/$/download/20211026h265/effc4b1075f3ced12d11fc0b7b43d7ed3061f9a0" type="video/mp4">
+  </video>
+</td>
+</tr>
+</tbody>
+</table>
+
+</body>
+</html>
