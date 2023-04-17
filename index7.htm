@@ -6,6 +6,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 <title>网络测速 26MB</title>
 <style>
+	span#speed {
+    font-size: 20px;
+    color: #ccc;
+	}
+	progress#progressbar {
+		width: 280px;
+	}
 	body{
 	font-size: 12px;
 	font-family: Helvetica,droid sans,wenquanyi zen hei,heiti tc,lihei pro,microsoft yahei,PMingLiU; 
@@ -89,7 +96,11 @@
     <h1>网络测速 26MB</h1>
   </div>
   <div class="content">
-    <button id="starttest">开始</button>
+	<button id="starttest">开始</button>
+	<br>
+	<progress id="progressbar" value="0" max="100"></progress>
+	<br>
+	<span id="speed"></span>
   </div>
   <div id="results">
   </div>  
